@@ -97,48 +97,28 @@ pip3 install pandas openpyxl
 
 - On **Windows**:
 ``
-python merger.py
+python join.py
 ``
 
 - On **macOS**:
 ``
-python3 merger.py
+python3 join.py
 ``
 
-4. A file dialog window will open. Select your REDCap CSV or Excel file.
+4. A file dialog window will open. **For the first file, select the REDCap output CSV.**
 
-5. The script will create a new file with the same name but ending with `_merged.csv` in the same folder.
 
----
+5. Another file dialog will open. **For the second file, select the Epic output.**
 
-## Example
 
-Before (multiple rows per patient):
 
-| Record ID | Repeat Instrument      | First Name | Last Name | Age | DOB     |
-|-----------|------------------------|------------|-----------|-----|---------|
-| 125       |                        | John       | Doe       |     |         |
-| 125       | Survey                 |            |           | 52  | 4/12/53 |
-| 125       | Patient Assessments    |            |           |     |         |
-
-After (merged into one row):
-
-| Record ID | Repeat Instrument | First Name | Last Name | Age | DOB     |
-|-----------|-------------------|------------|-----------|-----|---------|
-| 125       | Survey            | John       | Doe       | 52  | 4/12/53 |
+6. The script will create a new file named **"merged.csv"** in the same folder.
 
 ---
 
-## Notes
-
-- Your input file must contain a column named exactly: `Record ID`
-- Column headers with extra spaces will be cleaned automatically
-- Output file is saved in the same folder as the input file
-- If reading Excel files, `openpyxl` is required
 
 ---
 
 ## License
 
 MIT License — free for personal or commercial use.
-```
