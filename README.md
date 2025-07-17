@@ -26,7 +26,7 @@ The script matches patients based on **First Name**, **Last Name**, and **Appoin
 
 ---
 
-## Installation Instructions
+## Python Installation Instructions
 
 ### 🪟 Windows
 
